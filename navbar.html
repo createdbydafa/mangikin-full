@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="assets/style.css" /> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #102542;
+        font-family: sans-serif;
+      }
+
+      header nav {
+        background-color: #f87060;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 1em 3%;
+        position: fixed;
+        left: 0;
+        right: 0;
+      }
+
+      .logo {
+        margin-right: auto;
+        color: #102542;
+        cursor: pointer;
+        font-size: 1.2em;
+        transition: all ease 0.3s;
+      }
+
+      .logo:hover {
+        color: #2862b3;
+      }
+
+      .navbar-item ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+      }
+
+      .navbar-item ul li {
+        margin: 0 0.5em;
+      }
+
+      .navbar-item ul li a {
+        color: #102542;
+        text-decoration: none;
+        transition: all ease-in-out 0.3s;
+      }
+
+      .navbar-item ul li .contact {
+        display: inline-block;
+        transition: padding 0.2s ease, background-color 0.2s ease;
+        padding: 0.6em;
+        border-radius: 10px;
+      }
+
+      .navbar-item ul li .contact:hover {
+        background-color: #102542;
+        color: #f87060;
+        border-radius: 10px;
+      }
+
+      .navbar-item ul li a:hover {
+        color: #2862b3;
+      }
+
+      .icon a {
+        color: #102542;
+      }
+
+      #menu {
+        display: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        #menu {
+          display: inline;
+        }
+
+        .navbar-item {
+          position: absolute;
+          top: 100%;
+          right: -100%;
+          background-color: #f87060;
+          height: 100vh;
+          width: 50%;
+          transition: 0.2s;
+        }
+
+        .navbar-item.active {
+          right: 0;
+        }
+
+        .navbar-item ul {
+          display: block;
+          padding: 1rem;
+        }
+
+        .navbar-item ul li {
+          margin: 1.5em 0;
+          text-align: center;
+        }
+
+        @media (max-width: 450px) {
+          .logo {
+            font-size: 1em;
+          }
+
+          .navbar-item {
+            width: 60%;
+          }
+        }
+      }
+    </style>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1>Elektronika</h1>
+        </div>
+        <div class="navbar-item">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Produk</a></li>
+            <li><a href="#">Testimoni</a></li>
+            <li><a href="#" class="contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="icon">
+          <a href="#"><i id="menu" data-feather="menu"></i></a>
+        </div>
+      </nav>
+    </header>
+    <script>
+      feather.replace();
+
+      const navbaritem = document.querySelector(".navbar-item");
+
+      document.querySelector("#menu").onclick = () => {
+        navbaritem.classList.toggle("active");
+      };
+
+      const sidebar = document.querySelector("#menu");
+      document.addEventListener("click", function (klik_event) {
+        if (!sidebar.contains(klik_event.target)) {
+          navbaritem.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

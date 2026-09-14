@@ -1,0 +1,879 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* conttainer 1 */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1.2rem 11rem;
+  /* margin: 0.5rem; */
+  background-color: #ffff;
+  /* position: fixed; */
+  border-bottom: 1px solid #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+}
+.utama1 h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 2.3rem;
+  padding-right: 0rem;
+}
+.nav-list {
+  display: flex;
+  padding-right: 0rem;
+  gap: 20px;
+}
+.icon {
+  display: none;
+}
+.nav-list a {
+  position: relative;
+  text-decoration: none;
+  list-style: none;
+  color: #000;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding: 5px;
+  /* margin: 5px; */
+}
+.nav-list a:hover {
+  background-color: #444;
+  border-radius: 10px;
+  color: #ffff;
+  transition: 0.5s;
+}
+/* container 2 */
+.utama2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 10rem;
+  background-color: #ffff;
+  min-height: 100vh;
+}
+.konten-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px;
+}
+.konten-logo h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  color: rgb(36, 33, 33);
+}
+.konten-logo p {
+  font-family: sans-serif;
+  font-size: 1.3rem;
+}
+.btn-cta {
+  display: flex;
+  align-items: center;
+}
+/* From Uiverse.io by satyamchaudharydev */
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: rgb(0 107 179);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffff;
+  gap: 10px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+/* From Uiverse.io by wilsondesouza */
+ul {
+  list-style: none;
+}
+
+.example-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.example-2 .icon-content {
+  margin: 0 10px;
+  position: relative;
+}
+.example-2 .icon-content .tooltip {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.example-2 .icon-content:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+.example-2 .icon-content a {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+.example-2 .icon-content a svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+.example-2 .icon-content a:hover {
+  color: white;
+}
+.example-2 .icon-content a .filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+.example-2 .icon-content a:hover .filled {
+  height: 100%;
+}
+
+.example-2 .icon-content a[data-social="whatsapp"] .filled,
+.example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+  background-color: #128c7e;
+}
+
+.example-2 .icon-content a[data-social="facebook"] .filled,
+.example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
+  background-color: #3b5998;
+}
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5b51db,
+    #b33ab4,
+    #c135b4,
+    #e1306c,
+    #fd1f1f
+  );
+}
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+  background-color: #ff0000;
+}
+
+.konten-img img {
+  width: 600px;
+  max-width: 550px;
+}
+/* container 3 */
+.container3 {
+  background: #111;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper-container3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.foto-container3 {
+  width: 100%;
+  max-width: 450px;
+}
+.content-container3 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  width: 62%; /* Menyamakan dengan about-container3 */
+  gap: 70px;
+}
+
+.about-container3 {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+.about-container3 h2,
+p {
+  margin: 10px 0;
+}
+
+.about-container3 h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  color: rgb(36, 33, 33);
+}
+
+.about-container3 p {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+}
+
+.servis-container3 {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  /* width: 50%; */
+  color: white;
+}
+
+.servis-container3 i {
+  background-color: white;
+  color: #111;
+  padding: 1.5rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+.servis-container3 h2 {
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+.servis-container3 p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+}
+/* container 4 */
+.menu {
+  padding: 1.2rem 10rem;
+}
+
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+.card-container {
+  display: flex;
+}
+
+.card {
+  margin: 20px;
+  background-color: #fdfdfd;
+  width: 30%;
+  box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card-content {
+  padding: 1.3rem;
+}
+.card-content h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 15px;
+}
+.card-content h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2rem;
+  margin: 15px;
+}
+.card-content p {
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  text-align: justify;
+  text-align: center;
+}
+.card-image {
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.card-image img:hover {
+  scale: 1.3;
+}
+.price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price-wrapper h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+#pesan {
+  border: none;
+  border-radius: 8px;
+  margin: 1.2rem;
+  padding: 0.5rem;
+  width: 35%;
+}
+.menu button {
+  display: block;
+  margin: 2rem auto;
+  padding: 1.2rem;
+  width: 20%;
+  outline: none;
+  border: none;
+  border-radius: 10px 10px;
+  background-color: crimson;
+  transition: 0.3s ease;
+  color: white;
+}
+.menu button:hover {
+  background-color: #a1001f;
+}
+.menu button a {
+  font-family: sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+}
+
+/* container 5 */
+footer {
+  /* position: fixed; */
+  bottom: 0px;
+  width: 100%;
+  color: #fff;
+  background: #111;
+}
+/* left box */
+.main-container {
+  display: flex;
+}
+.main-container .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content::after {
+  position: absolute;
+  content: "";
+  top: -10px;
+  height: 2px;
+  width: 15%;
+  background-color: crimson;
+}
+
+/* center box */
+.center .content .fas {
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.sosial {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+}
+
+.sosial a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #1a1a1a; /* Warna dark seperti di center box */
+  border-radius: 50%;
+  color: #fff; /* Warna teks putih */
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sosial a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sosial a span {
+  font-size: 1.5 rem;
+}
+
+/* Warna hover konsisten dengan tema crimson */
+.sosial a:hover {
+  background-color: crimson;
+  color: white;
+}
+
+/* Alternatif jika ingin mempertahankan warna platform saat hover */
+
+.sosial a[title="Facebook"]:hover {
+  background-color: #3b5998;
+  color: white;
+}
+
+.sosial a[title="Instagram"]:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: white;
+}
+
+.sosial a[title="WhatsApp"]:hover {
+  background-color: #25d366;
+  color: white;
+}
+*/
+
+/* Efek ripple seperti di center box */
+.sosial a {
+  position: relative;
+  overflow: hidden;
+}
+
+.sosial a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(0);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.sosial a:hover::after {
+  transform: scale(1.5);
+  opacity: 0;
+}
+.center .content .fas:hover {
+  color: crimson;
+}
+.center .content .teks {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone {
+  margin: 10px 0;
+}
+/* right box */
+.right form .text {
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+.right form .msg {
+  margin-top: 10px;
+}
+.right form input,
+.right form textarea {
+  width: 100%;
+  font-size: 1.0625rem;
+  padding-left: 10px;
+  background: #151515;
+  border: 1px solid #222222;
+}
+.right form input:focus,
+.right form textarea:focus {
+  outline-color: #3498db;
+}
+.right form input {
+  height: 35px;
+}
+.right form .btn {
+  margin-top: 10px;
+}
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: crimson;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.right form .btn button:hover {
+  background: none;
+}
+/* bottom copyright */
+.bottom center {
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span {
+  color: #656565;
+}
+.bottom center a {
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom center a:hover {
+  text-decoration: underline;
+}
+
+/* responsive navbar (utama 1) */
+@media screen and (max-width: 768px) {
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    background-color: #ffff;
+    padding: 1rem;
+    /* border-top: 1px solid #000; */
+    box-shadow: 1px rgba(0, 0, 0, 0.1);
+  }
+  .icon {
+    display: flex;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #000;
+  }
+  .nav-list.show {
+    display: flex;
+  }
+  .nav-list a:hover {
+    background-color: #444;
+    border-radius: 10px;
+    color: #ffff;
+    transition: 0.5s;
+  }
+}
+@media (max-width: 480px) {
+  .utama1 h1 {
+    font-size: 1.5rem;
+  }
+  .nav-list a {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .icon {
+    font-size: 1.2rem;
+  }
+  nav {
+    padding: 1rem 1.5rem;
+  }
+}
+@media (max-width: 420px) {
+  .utama1 h1 {
+    font-size: 1.7rem;
+  }
+  .nav-list a {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+  }
+  .icon {
+    font-size: 1.5rem;
+  }
+}
+/* responsive container 2  */
+@media screen and (max-width: 768px) {
+  .utama2 {
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+  }
+  .konten-img {
+    order: -1; /* ini bikin gambar tampil lebih atas */
+  }
+
+  .konten-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .konten-logo {
+    text-align: center;
+    order: 1;
+  }
+  .konten-logo h2 {
+    font-size: 2rem;
+  }
+  .konten-logo p {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  .utama2 {
+    margin: 1.5rem;
+  }
+  .konten-img img {
+    width: 300px;
+  }
+}
+/* responsive container 3  */
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .container3 {
+    padding: 1rem;
+  }
+
+  .wrapper-container3 {
+    flex-direction: column;
+  }
+
+  .foto-container3 {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .foto-container3 img {
+    display: none;
+  }
+
+  .content-container3 {
+    width: 100%;
+    margin-top: 1rem;
+    gap: 30px;
+  }
+
+  .about-container3 {
+    padding: 15px;
+  }
+
+  .about-container3 h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about-container3 p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .servis-container3 {
+    flex-direction: column;
+    gap: 20px;
+    /* padding: 0 10px; */
+  }
+
+  .servis-container3 i {
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    box-sizing: border-box;
+  }
+
+  .servis-container3 h2 {
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+
+  .servis-container3 p {
+    font-size: 1rem;
+  }
+}
+
+/* Untuk layar sangat kecil (max-width: 480px) */
+@media (max-width: 480px) {
+  .about-container3 h2 {
+    font-size: 1.3rem;
+    border-bottom: 1px solid black;
+  }
+
+  .about-container3 p {
+    font-size: 1rem;
+  }
+
+  .servis-container3 i {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .servis-container3 h2 {
+    font-size: 1rem;
+  }
+
+  .servis-container3 p {
+    font-size: 1rem;
+  }
+}
+/* responsive container 4  */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .menu h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .card-container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+  }
+  .card-content h2 {
+    font-size: 1.5rem;
+  }
+  .card-content p {
+    font-size: 1.3rem;
+  }
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  .menu button {
+    width: 50%;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .menu h1 {
+    font-size: 1.5rem;
+  }
+  .card {
+    width: 100%;
+    height: auto;
+  }
+  .price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .price-wrapper h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  #pesan {
+    width: 25%;
+    padding: 0.5rem 1rem;
+    margin: 0;
+  }
+}
+
+/* responsive footer */
+@media screen and (max-width: 900px) {
+  footer {
+    position: relative;
+    bottom: 0;
+  }
+  .main-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-container .box {
+    margin: 5px 0;
+  }
+}
